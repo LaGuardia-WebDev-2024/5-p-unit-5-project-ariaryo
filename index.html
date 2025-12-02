@@ -6,7 +6,7 @@ Requirements
 
 Select TWO Additional Features to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[ yes ] Feature 2 - Flip Card
 [ no ] Feature 3 - Animation
 [ yes ] Feature 4 - Linear Gradient
 [ yes ] Feature 5 - Use a .Gif
@@ -41,6 +41,34 @@ background-color: aqua;
      .gradient-box {
   background: linear-gradient(90deg, red, yellow); /* Equivalent to 'to right' */
 }
+.container {
+  width:350px;
+  height:500px;
+}
+
+
+.card {
+height:100%;
+width:100%;
+position:relative;
+transition: transform 1500ms;
+}
+.card:hover{
+  crusor:pointer;
+  transform:rotateY(180deg);
+}
+.front,
+.back {
+  height:100%;
+  width:100%;
+  border-radius: 2rem;
+}
+.back {
+  transform:rotateY(180deg)
+}
+.front{
+  background-image: url(British-Short-Haired-cat.jpg.webp)
+}
       
   </style>
 </head>
@@ -58,6 +86,15 @@ background-color: aqua;
 </div>
 
 
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="front"></div>
+    <div class="back">
+
+    </div>
+  </div>
 </div>
 </body>
 </html>
